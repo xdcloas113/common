@@ -16,6 +16,8 @@
         <mybatis-generator.ver>1.3.6</mybatis-generator.ver>
         <javax.mail>1.5.2</javax.mail>
         <commons-lang3>3.7</commons-lang3>
+        <ftp.ver>3.3</ftp.ver>
+        <lombok.ver>1.16.22</lombok.ver>
     </properties>
     <dependencies>
         <!-- Mybatis -->
@@ -39,7 +41,6 @@
             <artifactId>mybatis-generator-core</artifactId>
             <version>${mybatis-generator.ver}</version>
         </dependency>
-
         <!-- 邮箱 -->
         <dependency>
             <groupId>com.sun.mail</groupId>
@@ -52,6 +53,29 @@
             <artifactId>commons-lang3</artifactId>
             <version>${commons-lang3}</version>
         </dependency>
+        <!-- ftp -->
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>${ftp.ver}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <!-- 分页 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+
 
     </dependencies>
 

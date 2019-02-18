@@ -16,53 +16,46 @@ import java.util.Properties;
 public class emailUtils {
     //用户名
     private static String username ;
-    //当前账户后期写入配置
+
+    //授权码
     private static String password ;
 
-    //mail.from=xdcloas113@163.com
+    //是谁发过来的
     private static String from ;
 
-    //    #跳转地址 后期写入配置
-    //    mail.activeUrl=https://www.baidu.com/
-    public static String activeUrl ;
+    //  #跳转地址
+    private static String activeUrl ;
 
     //发送内容
-    public static String content ;
+    private static String content ;
 
     //邮箱的标题
-    public static String subject;
+    private static String subject;
 
-    //#host地址
-    //mail.smtp_host=smtp.163.com
+    //#host地址（163）
     private static String smtp_host ;
 
-    {
-
-    }
-    public  void setUsername(String username) {
+    /**
+     *
+     * @param username 用户名
+     * @param password 邮箱授权码
+     * @param from     发送的邮箱地址（企业）
+     * @param smtp_host host地址 163（smtp.163.com）
+     * @param activeUrl 跳转地址 https://xx/ 必须要加入http 或者https不然url地址失效
+     * @param content  邮件内容
+     * @param subject 邮箱标题
+     */
+    public emailUtils (String username, String password , String from,String smtp_host,
+                       String activeUrl,String content,String subject) {
         this.username = username;
-    }
-    public  void setPassword(String password) {
         this.password = password;
-    }
-    public  void setFrom(String from) {
         this.from = from;
-    }
-    public  void setActiveUrl(String activeUrl) {
+        this.smtp_host = smtp_host;
         this.activeUrl = activeUrl;
-    }
-    //邮箱内容
-    public  void setContent(String content) {
         this.content = content;
-    }
-    //标题
-    public  void setSubject(String subject) {
         this.subject = subject;
     }
-    //host
-    public  void setSmtp_host(String smtp_host) {
-        this.smtp_host = smtp_host;
-    }
+    public emailUtils (){ }
 
     /**
      *
@@ -92,8 +85,9 @@ public class emailUtils {
         }
     }
     public static void main(String[] args) {
-
-//		sendMail("测试邮件", "你好??", "1004655482@qq.com");
+        emailUtils e = new emailUtils("xdcloas113@163.com","yqy123456","xdcloas113@163.com",
+                "smtp.163.com","https://www.baidu.com/", "fack","测试跳转问题");
+        e.sendMail("abc","235783655@qq.com");
     }
 
 }
