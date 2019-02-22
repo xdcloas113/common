@@ -17,10 +17,10 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
-public class FtpUtils {
+public class FtpUtil {
 
     /** 日志对象 **/
-    private static  Logger LOGGER = LoggerFactory.getLogger(FtpUtils.class);
+    private static  Logger LOGGER = LoggerFactory.getLogger(FtpUtil.class);
 
     /** FTP地址 **/
     private static  String FTP_ADDRESS ;

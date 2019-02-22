@@ -1,6 +1,5 @@
 package com.laoxu.tools;
 
-import org.apache.commons.lang3.RandomStringUtils;
 
 import javax.mail.Message;
 import javax.mail.Session;
@@ -13,7 +12,7 @@ import java.util.Properties;
  * 修改人：xdc
  * 创建时间：2019-02-15 17:40
  */
-public class emailUtils {
+public class emailUtil {
     //用户名
     private static String username ;
 
@@ -45,7 +44,7 @@ public class emailUtils {
      * @param content  邮件内容
      * @param subject 邮箱标题
      */
-    public emailUtils (String username, String password , String from,String smtp_host,
+    public emailUtil (String username, String password , String from,String smtp_host,
                        String activeUrl,String content,String subject) {
         this.username = username;
         this.password = password;
@@ -55,7 +54,7 @@ public class emailUtils {
         this.content = content;
         this.subject = subject;
     }
-    public emailUtils (){ }
+    public emailUtil (){ }
 
     /**
      *
@@ -85,7 +84,7 @@ public class emailUtils {
         }
     }
     public static void main(String[] args) {
-        emailUtils e = new emailUtils("xdcloas113@163.com","yqy123456","xdcloas113@163.com",
+        emailUtil e = new emailUtil("xdcloas113@163.com","yqy123456","xdcloas113@163.com",
                 "smtp.163.com","https://www.baidu.com/", "fack","测试跳转问题");
         e.sendMail("abc","235783655@qq.com");
     }
