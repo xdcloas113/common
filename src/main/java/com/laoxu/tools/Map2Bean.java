@@ -40,7 +40,7 @@ public class Map2Bean {
                     privateField.set(obj, Boolean.parseBoolean(String.valueOf(value)));
                 } else if (type.equals("class java.lang.Long")) {
                     privateField.set(obj, Long.parseLong(String.valueOf(value)));
-                } else if (type.equals("class java.lang.Integer")) {
+                } else if (type.equals("class java.lang.Integer") | type.equals("int")) {
                     privateField.set(obj, Integer.parseInt(String.valueOf(value)));
                 } else if (type.equals("class java.lang.Double")) {
                     privateField.set(obj,Double.parseDouble(String.valueOf(value)));
