@@ -13,7 +13,6 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.4.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <properties>
@@ -24,7 +23,8 @@
         <javax.mail>1.5.2</javax.mail>
         <commons-lang3>3.7</commons-lang3>
         <ftp.ver>3.3</ftp.ver>
-        <lombok.ver>1.16.22</lombok.ver>
+        <lombok.ver>1.16.10</lombok.ver>
+        <okhttps.ver>3.3.0</okhttps.ver>
     </properties>
     <dependencies>
         <dependency>
@@ -105,7 +105,14 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.10</version>
+            <version>${lombok.ver}</version>
+        </dependency>
+
+        <!-- okhttp-->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>${okhttps.ver}</version>
         </dependency>
 
 
