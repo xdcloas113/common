@@ -243,15 +243,13 @@ public class MYSQLSelectByPagePlugin extends PluginAdapter {
         answer.addElement(new TextElement("<!-- 分页查询 -->"));
 
         sb.setLength(0);
-        sb.append("     select a.* from ");
-        sb.append(introspectedTable
-                .getAliasedFullyQualifiedTableNameAtRuntime());
+        sb.append("     select a.*  ");
+//        sb.append(introspectedTable
+//                .getAliasedFullyQualifiedTableNameAtRuntime());
+//        sb.append("    a ");
+//        List<IntrospectedColumn> pks=introspectedTable.getPrimaryKeyColumns();
 
-        sb.append("    a ");
-        List<IntrospectedColumn> pks=introspectedTable.getPrimaryKeyColumns();
-
-
-        sb.append("      from "+introspectedTable.getAliasedFullyQualifiedTableNameAtRuntime()+"\r\n");
+        sb.append("      from "+introspectedTable.getAliasedFullyQualifiedTableNameAtRuntime()+"  a \r\n");
         sb.append("      <if test=\"oredCriteria[0].criteria.size > 0  \"> \r\n");
         sb.append("          <include refid=\"select_by_page_outter_where_sql\"/> \r\n");
         sb.append("      </if> \r\n");
