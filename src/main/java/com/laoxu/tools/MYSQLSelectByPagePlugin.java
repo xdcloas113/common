@@ -188,7 +188,8 @@ public class MYSQLSelectByPagePlugin extends PluginAdapter {
 
         StringBuilder sb = new StringBuilder();
         sb.append("       <if test=\"oredCriteria[0].criteria.size>0\">");
-        sb.append("          <if test=\"_parameter != null\" > <include refid=\"Example_Where_Clause\"/>          and  </if>");
+//        sb.append("          <if test=\"_parameter != null\" > <include refid=\"Example_Where_Clause\"/>          and  </if>");
+        sb.append("          <if test=\"_parameter != null\" > <include refid=\"Example_Where_Clause\"/>            </if>");
         sb.append("       </if>");
         sb.append("       <if test=\"oredCriteria[0].criteria.size==0\"> ");
         sb.append("         where ");

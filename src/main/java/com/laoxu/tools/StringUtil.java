@@ -66,7 +66,26 @@ public class StringUtil {
         return a;
     }
 
+    /**
+     * 是否包含特定的值，这个是包含  不是全匹配哈
+     * @param array
+     * @param value
+     * @return
+     */
+    public static boolean isContains(String[] array, String value) {
+        return indexOf(array, value) > -1;
+    }
 
+    public static int indexOf(String[] array, String value) {
+        if (null != array) {
+            for (int i = 0; i < array.length; i++) {
+                if (array[i].contains(value)) {
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
 
     /**
      * 生成一个Oracle数据库格式的GUID
